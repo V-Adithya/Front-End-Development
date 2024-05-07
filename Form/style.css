@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #00a7fb;
   margin: 0;
   padding: 0;
 }
@@ -11,11 +11,6 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-  margin: 0 auto;
 }
 
 label {
@@ -37,17 +32,15 @@ input[type="range"] {
   box-sizing: border-box;
 }
 
-input[type="radio"] {
-  margin-right: 5px;
-}
-
 button[type="submit"] {
-  padding: 10px 20px;
+  padding: 10px 200px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
 
 button[type="submit"]:hover {

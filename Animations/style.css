@@ -1,15 +1,60 @@
-.one{
-    background-color:#b00b69;
-    height: 200px;
-    width: 200px;
+.one,
+.two,
+.three {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
 }
-.two{
-    background-color:#91eb0a;
-    height: 200px;
-    width: 200px;
+
+.one {
+  background-color: #ff6b6b;
+} /* Red */
+.two {
+  background-color: #77dd77;
+} /* Green */
+.three {
+  background-color: #71a6d2;
+} /* Blue */
+
+/* Hover effect */
+.one:hover,
+.two:hover,
+.three:hover {
+  transform: translateY(-5px);
 }
-.three{
-    background-color:#d03827;
-    height: 200px;
-    width: 200px;
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Individual button styles */
+.btn1 {
+  background-color: #ff6b6b;
+  margin-right: 10px;
+}
+.btn2 {
+  background-color: #77dd77;
+  margin-right: 10px;
+}
+.btn3 {
+  background-color: #71a6d2;
 }
