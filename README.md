@@ -19,7 +19,7 @@ This repository contains files for front-end development using AngularJS, Bootst
 To use this repository for front-end development:
 
 1. Clone the repository to your local machine using the following command:
-git clone <repository-url>
+   git clone <repository-url>
 
 2. Navigate to the respective folders based on your development needs. You can find AngularJS components in the `AngularJS` folder, Bootstrap files in the `Bootstrap` folder, custom CSS in the `CSS` folder, HTML files in the `HTML` folder, and JavaScript files in the `JS` folder.
 
@@ -28,6 +28,6 @@ git clone <repository-url>
 4. Test your changes locally to ensure everything works as expected.
 
 5. Once satisfied with your changes, push them to the repository using Git:
-git add .
-git commit -m "Your commit message here"
-git push origin master
+   git add .
+   git commit -m "Your commit message here"
+   git push origin master

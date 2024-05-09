@@ -7,6 +7,6 @@ angular.module("planet-app", []).controller("myController", ($scope) => {
     { name: "Jupiter", type: "Gas Giant", distance: 5.2, moons: 79 },
     { name: "Saturn", type: "Gas Giant", distance: 9.58, moons: 82 },
     { name: "Uranus", type: "Ice Giant", distance: 19.18, moons: 27 },
-    { name: "Neptune", type: "Ice Giant", distance: 30.07, moons: 14 }
+    { name: "Neptune", type: "Ice Giant", distance: 30.07, moons: 14 },
   ];
-})
+});

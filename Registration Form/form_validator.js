@@ -16,17 +16,10 @@ function formValidator() {
   if (notEmpty(firstname, "first name can not be empty")) {
     if (isAlphabet(firstname, "Please enter only letters for your Firstname")) {
       if (lengthRestriction(firstname, 6)) {
-        if (
-          isAlphabet(lastname, "Please enter only letters for your Lastname")
-        ) {
+        if (isAlphabet(lastname, "Please enter only letters for your Lastname")) {
           if (emailValidator(email, "Please enter a valid email address")) {
             if (lengthRestriction(pass, 6)) {
-              if (
-                isAlphanumeric(
-                  pass,
-                  "please enter Numbers and Letters Only for password"
-                )
-              ) {
+              if (isAlphanumeric(pass, "please enter Numbers and Letters Only for password")) {
                 if (notEmpty(addr, "please enter the address")) {
                   if (isNumeric(mobileno, "Please enter a valid mobileno")) {
                     if (lengthRestriction1(mobileno, 10, 10)) {
