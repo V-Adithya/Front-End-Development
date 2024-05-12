@@ -6,10 +6,18 @@
     <title>Planetary Information</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../nonameyet/node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <script src="../nonameyet/node_modules/bootstrap/dist/js/bootstrap.min.js" async defer></script>
-    <script src="../nonameyet/node_modules/angular/angular.min.js" async defer></script>
-    <script src="../nonameyet/myAngular.js" async defer></script>
+    <link
+      rel="stylesheet"
+      href="../Planetary System/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script
+      src="../Planetary System/node_modules/bootstrap/dist/js/bootstrap.min.js"
+      async
+      defer></script>
+    <script
+      src="../Planetary System/node_modules/angular/angular.min.js"
+      async
+      defer></script>
+    <script src="../Planetary System/myAngular.js" async defer></script>
   </head>
   <body ng-controller="myController">
     <div class="container">
@@ -43,7 +51,8 @@
               <th>Moons</th>
             </thead>
             <tbody>
-              <tr ng-repeat="planet in planets|filter:searchItem|orderBy:sortBy">
+              <tr
+                ng-repeat="planet in planets|filter:searchItem|orderBy:sortBy">
                 <td>{{planet.name}}</td>
                 <td>{{planet.type}}</td>
                 <td>{{planet.distance}}</td>
