@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Simulation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        .traffic-light {
+            width: 100px;
+            height: 300px;
+            background-color: black;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .light {
+            width: 80px;
+            height: 80px;
+            margin: 10px auto;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>Traffic Light Simulation</h1>
+        <div class="traffic-light">
+            <div id="red" class="light"></div>
+            <div id="orange" class="light"></div>
+            <div id="green" class="light"></div>
+        </div>
+        <button id="stopBtn" class="btn btn-danger">Stop</button>
+        <button id="readyBtn" class="btn btn-warning">Ready</button>
+        <button id="goBtn" class="btn btn-success">Go</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            function resetLights() {
+                $('#red').removeClass('red');
+                $('#orange').removeClass('orange');
+                $('#green').removeClass('green');
+            }
+
+            $('#stopBtn').click(function () {
+                resetLights();
+                $('#red').addClass('red');
+            });
+
+            $('#readyBtn').click(function () {
+                resetLights();
+                $('#orange').addClass('orange');
+            });
+
+            $('#goBtn').click(function () {
+                resetLights();
+                $('#green').addClass('green');
+            });
+        });
+    </script>
+</body>
+
+</html>

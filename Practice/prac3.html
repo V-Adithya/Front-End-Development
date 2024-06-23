@@ -1,0 +1,90 @@
+<!--You are a developer working on an educational application designed to teach students about the planets in the solar system. You need 
+to create a web page that allows users to view, search, and sort information about the planets using AngularJS and Bootstrap.
+Requirements:
+1. Search Functionality:
+o Users should be able to filter the list of planets by typing into a search box. The search should filter planets based on their name, 
+type, distance from the sun, or the number of moons.
+2. Sort Functionality:
+o Users should be able to sort the list of planets by selecting from a dropdown menu. The available sorting options are: Name, Type,
+Distance (AU), and Number of Moons.
+3. Display:
+o The data should be displayed in a responsive table using Bootstrap. Each row should display the planet's name, type, distance from the
+sun in astronomical units (AU), and the number of moons.
+4. Initial Sorting:
+o By default, the table should be sorted by the planet's name.
+
+Instructions:
+1. Use AngularJS to implement the functionality.
+2. Use Bootstrap for styling and layout.
+3. Ensure that the search and sort functionalities work seamlessly together.
+4. Test the application to ensure that it works correctly on different screen sizes.
+
+Data :
+[
+ { name: 'Mercury', type: 'Terrestrial', distance: 0.39, moons: 0 },
+ { name: 'Venus', type: 'Terrestrial', distance: 0.72, moons: 0 },
+ { name: 'Earth', type: 'Terrestrial', distance: 1.00, moons: 1 },
+ { name: 'Mars', type: 'Terrestrial', distance: 1.52, moons: 2 },
+ { name: 'Jupiter', type: 'Gas Giant', distance: 5.20, moons: 79 },
+ { name: 'Saturn', type: 'Gas Giant', distance: 9.58, moons: 82 },
+ { name: 'Uranus', type: 'Ice Giant', distance: 19.18, moons: 27 },
+ { name: 'Neptune', type: 'Ice Giant', distance: 30.07, moons: 14 }
+ ];-->
+
+<!DOCTYPE html>
+<html ng-app="planet-app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Planetary System/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="Planetary System/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="Planetary System/node_modules/angular/angular.min.js" defer></script>
+    <script src="Planetary System/myAngular.js" defer></script>
+</head>
+
+<body ng-controller="myController">
+    <div class="container">
+        <h1 class="text-center">Planetary System</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" placeholder="Enter a planet name" class="form-control" ng-model="searchItem">
+            </div>
+            <div class="col-md-6">
+                <select class="form-control" ng-model="sortItem">
+                    <option value="name">Name</option>
+                    <option value="type">Type</option>
+                    <option value="distance">Distance</option>
+                    <option value="moons">Moons</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Distance</th>
+                            <th>Moons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="planet in planets | filter:searchItem | orderBy:sortItem">
+                            <td>{{planet.name}}</td>
+                            <td>{{planet.type}}</td>
+                            <td>{{planet.distance}}</td>
+                            <td>{{planet.moons}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

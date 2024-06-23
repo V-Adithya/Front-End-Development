@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Slideshow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .slideshow {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Interactive Slideshow</h1>
+        <div class="slideshow">
+            <div class="slide" id="div1">
+                <img src="https://images.pexels.com/photos/561463/pexels-photo-561463.jpeg" alt="Sunset">
+            </div>
+            <div class="slide" id="div2">
+                <img src="https://images.pexels.com/photos/1008737/pexels-photo-1008737.jpeg" alt="Sunrise">
+            </div>
+            <div class="slide" id="div3">
+                <img src="https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg" alt="Mountain">
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevBtn" class="btn btn-primary">Previous</button>
+            <button id="nextBtn" class="btn btn-primary">Next</button>
+            <button id="toggleBtn" class="btn btn-secondary">Toggle</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="prac4.js"></script>
+</body>
+
+</html>

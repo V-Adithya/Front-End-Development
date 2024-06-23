@@ -1,0 +1,135 @@
+<!--You are tasked with creating an online registration form for an upcoming event. The form needs to capture the user's basic information, attendance status, number of
+additional guests, and any additional comments. It should be built using Bootstrap 5 to ensure a responsive and user-friendly design.
+Requirements:
+1. Form Layout and Design:
+o Utilize Bootstrap 5 classes to create a responsive form.
+o The form should have a maximum width of 700px and be centered on the page.
+o Use a container to wrap the form elements and a row for arranging input fields in a grid.
+2. Input Fields:
+o Include fields for first name, last name, email, phone number, country, state, and zip code.
+o Add radio buttons for the attendance status ("Will you attend?") with options for "Yes" and "No".
+o Provide a dropdown for the number of additional guests.
+o Include a textarea for additional comments.
+3. Form Validation:
+o Implement client-side validation using Bootstrap’s validation classes.
+o Ensure all required fields are validated before form submission.
+o Display custom validation messages for invalid inputs.
+4. Form Submission:
+o Add a submit button that triggers form validation.
+o Prevent form submission if there are validation errors.
+o Display the form validation state visually to the user.-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="py-5 text-center">
+            <h1>Online Registration Form</h1>
+            <p>saasdasdasda</p>
+        </div>
+        <div class="my-5">
+            <form action="" class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="fn" id="firstname" required />
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="ln" id="lastname" required />
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" required />
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" name="ph" id="phonenumber" pattern="[0-9]{10,12}"
+                            required />
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label">Country</label>
+                        <input type="text" class="form-control" name="coun" id="country" required />
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label">State</label>
+                        <select class="form-control" required>
+                            <option value=""></option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Kerala">Kerala</option>
+                        </select>
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label">Zip Code</label>
+                        <input type="text" class="form-control" name="zip" id="zipcode" pattern="[0-9]{6}" required />
+                        <div class="invalid-feedback">Enter the correct details</div>
+                    </div>
+                    <div class="form-check">
+                        <h3>Are you Attending?</h3>
+                        <input type="radio" class="form-check-control" name="radio" id="yes" required />
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-control" name="radio" id="no" required />
+                        <label class="form-check-label">No</label>
+                        <div class="invalid-feedback">Enter the options</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label">How many guests are coming</label>
+                        <select class="form-control" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option><option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12">
+                        <label class="form-label">Additional Comments</label>
+                        <textarea class="form-control" rows="8"></textarea>
+                    <hr class="my-4" />
+                    <button type="submit" class="w-100 btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        "use strict";
+        document.querySelectorAll(".needs-validation").forEach((form) => {
+            form.addEventListener("submit", (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add("was-validated");
+            });
+        });
+    </script>
+</body>
+
+</html>
