@@ -22,19 +22,3 @@ This guide provides an overview of front end full stack development using HTML, 
 6. **Node.js:**
    - JavaScript runtime environment that executes JavaScript code outside of a web browser, commonly used for server-side development.
 
-## To Do:
-
-- **Kubernetes:**
-   - Brief overview of Kubernetes, its role in container orchestration, and its key features.
-
-- **Jenkins:**
-   - Explanation of Jenkins, an open-source automation server.
-
-- **GitHub:**
-   - Definitions of terms such as pull, push, merge, unmerge, request, and fork, along with their functionalities within GitHub.
-
-- **Docker:**
-   - Description of Docker, a containerization platform, its uses, and key concepts.
-
-**Note:** Each section should be concise, providing essential information about the respective topic.
-
