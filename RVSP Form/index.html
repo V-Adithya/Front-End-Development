@@ -27,7 +27,7 @@
         <form class="needs-validation" novalidate>
           <div class="row lg-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
+              <label class="form-label">First name</label>
               <input type="text" class="form-control" id="firstName" placeholder="" value="" required />
               <div class="invalid-feedback">Valid first name is required.</div>
             </div>
@@ -97,19 +97,16 @@
     </main>
   </div>
   <script>
-    (function () {
-      "use strict";
-      document.querySelectorAll(".needs-validation").forEach(form => {
-        form.addEventListener("submit", event => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add("was-validated");
-        }, false);
-      });
-    })();
-
+    "use strict";
+    document.querySelectorAll(".needs-validation").forEach(form =>
+      form.addEventListener("submit", event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add("was-validated");
+      })
+    );
   </script>
 </body>
 
