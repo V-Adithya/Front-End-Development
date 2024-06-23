@@ -1,20 +1,22 @@
 <!--AngularJS Modules-->
 
 <html>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <body>
-    <!--// adding a controller-->
-    <div ng-app="myApp" ng-controller="myCtrl">{{ firstName + " " + lastName }}</div>
-    <script>
-      var app = angular.module("myApp", []); // creating a module
-      app.controller("myCtrl", function ($scope) {
-        $scope.firstName = "Crank";
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+  <!--// adding a controller-->
+  <div ng-app="myApp" ng-controller="myCtrl">{{ firstName + " " + lastName }}</div>
+  <script>
+    var app = angular.module("myApp", []); // creating a module
+    app.controller("myCtrl", function ($scope) {
+      $scope.firstName = "Crank";
 <<<<<<< HEAD
-        $scope.lastName = "Naidu";
+      $scope.lastName = "Naidu";
 =======
         $scope.lastName = "lil";
 >>>>>>> ac8f94787016a3a95d658a13398c462faf101dea
-      });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
